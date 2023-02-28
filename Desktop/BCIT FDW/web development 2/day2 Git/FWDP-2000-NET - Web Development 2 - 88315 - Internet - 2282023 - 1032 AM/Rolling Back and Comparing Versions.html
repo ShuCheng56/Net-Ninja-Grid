@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+    <title>Change this title</title>
+    <link rel="stylesheet" href="https://ltc.bcit.ca/public/v1/css/bcit.css">
+    <script src="https://ltc.bcit.ca/public/v1/js/vendor/modernizr.js"></script>
+</head>
+
+<body>
+<div class="container">
+<h1>Rolling Back and Comparing Versions</h1>
+<p>There are numerous situations where you may want or need to roll back to, or compare code with, previous commits.&nbsp; There are equally as many ways to approach doing so.</p>
+<p>Here are a few tips and useful commands for performing the above.</p>
+<p>To see the specific textual differences between your current working directory and the last commit (head) of the current branch:</p>
+<p style="padding-left: 40px;"><code>git status -v -v</code>&nbsp; (-v stands for verbose.&nbsp; One -v will shows details of staged, but uncommitted changes.&nbsp; Two -v flags outputs both staged and unstaged changes)</p>
+<p>To store any changes that exist in your working directory without staging or committing them (effectively rolling back to the latest commit), you can stash them with:</p>
+<p style="padding-left: 40px;"><code>git stash -m"<em>describe what you're stashing</em>"</code></p>
+<p>After stashing changes, you can make and commit new changes and/or merge in changes from other branches, and if you later decide that you want to restore what was stashed you can inspect a list of stashed changes with</p>
+<p style="padding-left: 40px;"><code>git stash list</code></p>
+<p>Once you've identified which stashed version you want to reapply, you can use either&nbsp;</p>
+<p style="padding-left: 40px;"><code>git stash pop</code></p>
+<p style="padding-left: 40px;"><code>git stash apply <em>stash@{0}</em></code></p>
+<p>Often time you may want to roll back either your entire working directory or a specific file to its state as of a previous commit.&nbsp; You can do so with:</p>
+<p style="padding-left: 40px;"><code>git checkout &lt;hash&gt;<br>&nbsp;- or - <br>git checkout &lt;hash&gt; &lt;filename&gt;&nbsp;</code><br>* the hash is the short version of unique identifier generated for each commit</p>
+<p><span style="color: #cd2026;"><strong>Warning: Checking out a previous commit will leave you in a Detached Head state.</strong></span>&nbsp; It's not as ominous as it sounds, and is outside the scope of this lesson, but you want to avoid having your head detached.&nbsp; A common strategy for avoiding this is to clone your repo into a different folder, roll back that repo to a previous commit (detaching its head in the process), then manually bring in any changes that you want to restore to your primary repo before discarding the secondary one.&nbsp;</p>
+</div>
+<script src="https://ltc.bcit.ca/public/v1/js/lat.js"></script>
+</body></html>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+    <title>Change this title</title>
+    <link rel="stylesheet" href="https://ltc.bcit.ca/public/v1/css/bcit.css">
+    <script src="https://ltc.bcit.ca/public/v1/js/vendor/modernizr.js"></script>
+</head>
+
+<body>
+<div class="container">
+<h1>Track a Remote Repo&nbsp;</h1>
+<p>If you already have a git repo for your project on your local machine and you want to push it out to GitHub:</p>
+<ul>
+<li>Create a repository for your project on GitHub
+<ul>
+<li>To avoid errors, make sure the options for adding a README, .gitignore, and license are NOT checked.&nbsp; You want an empty repo on GitHub.</li>
+</ul>
+</li>
+<li>At the top of the page on your newly created GitHub repo, click the Copy To Clipboard button next to the repo URL</li>
+<li>Back on your local computer, in your terminal, change directory to the root of your project</li>
+<li>Enter the following set of commands:
+<ul>
+<li><code>git remote add origin [REMOTE_URL]</code>
+<ul>
+<li>replace REMOTE_URL with the URL you copied in the previous step</li>
+</ul>
+</li>
+<li>
+<pre><code>git remote -v</code></pre>
+<ul>
+<li>verify the remote url</li>
+</ul>
+</li>
+<li>
+<pre tabindex="0"><code>git push -u origin main</code></pre>
+<ul>
+<li>this sends your local repository, including your history of commits, to GitHub.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>When that's all done, you should see your project's files and revisions on GitHub</p>
+</div>
+<script src="https://ltc.bcit.ca/public/v1/js/lat.js"></script>
+</body></html>

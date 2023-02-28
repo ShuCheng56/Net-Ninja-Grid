@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+    <title>Change this title</title>
+    <link rel="stylesheet" href="https://ltc.bcit.ca/public/v1/css/bcit.css">
+    <script src="https://ltc.bcit.ca/public/v1/js/vendor/modernizr.js"></script>
+</head>
+
+<body>
+<div class="container">
+<h1>Merging Branches</h1>
+<p>When you're satisfied that your new or edited feature branch is ready for production, you will want to (carefully) merge it back into the main branch.&nbsp;</p>
+<p><strong>If you are working solo on your project this process will look like:</strong></p>
+<ul>
+<li>commit all changes on your feature branch</li>
+<li>switch to the main branch with:
+<ul>
+<li><code> git checkout main</code></li>
+</ul>
+</li>
+<li>merge the commits from your feature branch into main with:
+<ul>
+<li><code>git merge [feature branch name]&nbsp;</code></li>
+</ul>
+</li>
+<li>push the complete repository to GitHub
+<ul>
+<li><code>git push</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>If, however, you are working on a team and a review process would be more appropriate before integrating your new feature:</strong></p>
+<ul>
+<li>commit all changes on your feature branch</li>
+<li>push your feature branch to GitHub
+<ul>
+<li><code>git push origin [feature branch name]</code></li>
+</ul>
+</li>
+<li>Then, on GitHub, issue a Pull Request indicating which branch is to be reviewed before being merged into main</li>
+<li>Once your team is satisfied that your feature is approved, click Merge Pull Request, leave a comment as to what is being merged and finally, click Confirm Merge.</li>
+<li>You may then choose to delete the feature branch (to keep things clean).</li>
+</ul>
+</div>
+<script src="https://ltc.bcit.ca/public/v1/js/lat.js"></script>
+</body></html>

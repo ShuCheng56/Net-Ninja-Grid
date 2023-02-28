@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+    <title>Change this title</title>
+    <link rel="stylesheet" href="https://ltc.bcit.ca/public/v1/css/bcit.css">
+    <script src="https://ltc.bcit.ca/public/v1/js/vendor/modernizr.js"></script>
+</head>
+
+<body>
+<div class="container">
+<h1>Creating Branches</h1>
+<p>The default, "base", branch of a git repository is named <strong>main</strong>.&nbsp;&nbsp;</p>
+<p>You always create a new branch from an existing branch, typically from the&nbsp; <strong>main&nbsp;</strong>branch.</p>
+<h3>View all existing branches</h3>
+<p>To view all existing branches in a repository, use the following command:</p>
+<ul>
+<li><code>git branch -a </code></li>
+</ul>
+<p>The above will also show you what branch you are currently working on.</p>
+<h3>Switch to a different existing branch</h3>
+<p>To switch to a different branch, first commit any changes in your current working branch (or risk losing them), then:</p>
+<ul>
+<li><code>git checkout [name-of-branch-to-switch-to] </code></li>
+</ul>
+<p><em>Note: There is a relatively new command for switching branches, but it is still in "experimental" status (despite being stable for a while now).&nbsp; The new alternative to the above is:</em><code> git switch [name-of-branch-to-switch-to]&nbsp;</code><em> &nbsp; &nbsp; &nbsp; </em>&nbsp;</p>
+<h3>Create a new branch</h3>
+<p>To create a new branch based on the current branch, enter:</p>
+<ul>
+<li><code>git branch [your-new-branch-name] </code></li>
+</ul>
+<p>Note:&nbsp; We can also use the switch command, with a -C flag, to create and switch to a new branch in one step. &nbsp;<code>git switch -C [your-new-branch-name]</code></p>
+<h3>Upload current branch to GitHub</h3>
+<ul>
+<li><code>git push –u origin [your-current-branch-name] </code></li>
+</ul>
+</div>
+<p>
+<script src="https://ltc.bcit.ca/public/v1/js/lat.js"></script>
+</p>
+</body></html>

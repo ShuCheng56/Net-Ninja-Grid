@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+    <title>Change this title</title>
+    <link rel="stylesheet" href="https://ltc.bcit.ca/public/v1/css/bcit.css">
+    <script src="https://ltc.bcit.ca/public/v1/js/vendor/modernizr.js"></script>
+</head>
+
+<body>
+<div class="container">
+<h1>Excluding Files and Folders</h1>
+<p>There are various situation where you actually don't want git to track versions of certain files or folders within your project, such as:</p>
+<ul>
+<li>system files created by your OS</li>
+<li>node_modules folder
+<ul>
+<li>you'll learn about this when we get to React</li>
+</ul>
+</li>
+<li>computer generated files that are created/updated through a compile program&nbsp;
+<ul>
+<li>you'll learn about this when we get to Sass and Gulp</li>
+</ul>
+</li>
+</ul>
+<p>You can instruct git to ignore such files and folders by creating a simple text file, appropriately name .gitignore, in the root of your project.</p>
+<p>Note to Mac users:&nbsp;</p>
+<ul>
+<li>By default MacOS hides files that begin with "."</li>
+<li>To toggle the visibility of hidden files in Finder, press <code>cmd+shift+.</code></li>
+</ul>
+<p>Once you have created your .gitignore file, open it with a text editor and list them out, one per line, as follows:</p>
+<ul>
+<li>Ignore a single file
+<ul>
+<li>file-to-ignore.txt (or whatever file extension is appropriate)</li>
+</ul>
+</li>
+<li>Ignore a directory
+<ul>
+<li>folder-name/</li>
+</ul>
+</li>
+</ul>
+<p>You can also use * as a wildcard to exclude groups of files, for instance the following would exclude all pdf files in a directory named resources:</p>
+<ul>
+<li>resources/*.pdf</li>
+</ul>
+<p>To add comments in your .gitignore file, start the line with #</p>
+<p>The link below is to a reference .gitignore file that is a good starting point for web projects.&nbsp; Until you are using Sass or some other CSS preprocessor, you will want to comment out <strong>styles/</strong> on line 87</p>
+<p><a href="https://gist.github.com/michaelwhyte/341f3c841e6bb613f5d0974256d6b615">https://gist.github.com/michaelwhyte/341f3c841e6bb613f5d0974256d6b615</a></p>
+<p>&nbsp;&nbsp;</p>
+</div>
+<script src="https://ltc.bcit.ca/public/v1/js/lat.js"></script>
+</body></html>
